@@ -80,9 +80,7 @@ header {
 }
 
 
-/* FEATURE-1 */
-
-.content {
+.content__wrapper {
 	margin-right: auto;
 	margin-left: auto;
 	width: 91%;
@@ -93,7 +91,20 @@ header {
 	margin-top: 10px;
 }
 
-.content__text--prime {
+/* FEATURE-1 */
+
+.feature-1 .content {
+	margin-right: auto;
+	margin-left: auto;
+	width: 91%;
+	position: relative;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	margin-top: 10px;
+}
+
+.feature-1 .content__text--prime {
 	position: absolute;
 	font-family: 'Montserrat Alternates', sans-serif;
 	display: flex;
@@ -103,18 +114,18 @@ header {
 	transform-origin: 0 0;
 }
 
-.content__text--second {
+.feature-1 .content__text--second {
 	font-size: calc(var(--sizeindex) * 3.5);
 	text-transform: capitalize;
 	line-height: 130%;
 	padding-left: calc(var(--gap) * 2.3);
 }
 
-.content__text {
+.feature-1 .content__text {
 	transform: translateY(-10%);
 }
 
-.content__image {
+.feature-1 .content__image {
 	width: calc(var(--sizeindex) * 26);
 	height: calc(var(--sizeindex) * 23);
 	background-image: url(/img/imgBack1.png);
@@ -127,7 +138,81 @@ header {
 	width: 100%;
 	background-image: url(/img/smallWave.svg);
 	background-repeat: no-repeat;
-	background-size: contain;
+	background-size: cover;
 	margin-top: -60px;
 	z-index: -1;
+}
+
+/* FEATURE 2 */
+
+.feature-2 {
+	margin-bottom: 70px;
+}
+
+.feature-2 .content__wrapper {
+	margin-top: 40px;
+}
+
+.feature-2 .content__image {
+	width: 440px;
+	height: 295px;
+	background-image: url(/img/imgBack2.png);
+	background-size: contain;
+	background-repeat: no-repeat;
+	background-position: right;
+}
+
+.feature-2 .content__text {
+	max-width: 555px;
+}
+
+.feature-2 .content__text h2 {
+	margin-bottom: 55px;
+}
+
+.feature-2 .content__text--about {
+	display: block;
+	font-style: normal;
+	font-weight: 500;
+	font-size: 24px;
+	line-height: 29px;
+	margin-left: 40px;
+}
+
+.feature-2 .content__text--decoration {
+	float: left;
+	transform: translateY(2px);
+}
+
+/* FEATURE-3 */
+
+.feature-3 {
+	background-color: #6D4EA4;
+}
+
+.feature-3 h2 {
+	margin: auto;
+	margin-top: 50px;
+	margin-bottom: 60px;
+}
+
+.content__h2--wrapper {
+	width: 100%;
+	height: 60px;
+	background-color: #fff;
+}
+
+.feature-3 .content__table {
+	display: flex;
+	justify-content: space-between;
+	width: 100%;
+}
+
+.content__table--item {
+	width: 350px;
+	background-color: #388494;
+}
+
+.content__table--item-header {
+
 }
