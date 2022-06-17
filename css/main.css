@@ -1,7 +1,6 @@
 /* FONTS LOAD SECTION */
 
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,300;0,400;1,100&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Montserrat+Alternates&family=Montserrat:ital,wght@0,100;0,300;0,400;1,100&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat+Alternates&family=Montserrat:ital,wght@0,100;0,300;0,400;1,100&family=Roboto:ital,wght@0,400;1,300&display=swap');
 
 /* USER VARIABLES SECTION */
 
@@ -190,29 +189,104 @@ header {
 	background-color: #6D4EA4;
 }
 
-.feature-3 h2 {
-	margin: auto;
-	margin-top: 50px;
-	margin-bottom: 60px;
+.content__title {
+	text-align: center;
+	font-style: normal;
+	font-weight: 600;
+	font-size: calc(1.7*var(--sizeindex));
 }
 
-.content__h2--wrapper {
-	width: 100%;
-	height: 60px;
-	background-color: #fff;
+.content__title--wrapper {
+	width: 100vw;
+	display: inline-block;
+	margin-top: 50px;
+	margin-bottom: 66px;
 }
 
 .feature-3 .content__table {
 	display: flex;
 	justify-content: space-between;
 	width: 100%;
+	padding-left: var(--gap);
+	padding-right: var(--gap);
+	box-sizing: border-box;
 }
 
 .content__table--item {
 	width: 350px;
-	background-color: #388494;
+	height: 100%;
 }
 
 .content__table--item-header {
+	font-family: 'Roboto', sans-serif;
+	font-style: normal;
+	font-weight: 500;
+	font-size: calc(1.2*var(--sizeindex));
+	text-align: center;
+	margin-top: 10px;
+	margin-bottom: 50px;
+}
 
+.content__table--item-description {
+	font-family: 'Roboto', sans-serif;
+	font-style: normal;
+	font-weight: lighter;
+	font-size: calc(var(--sizeindex)*0.9);
+	line-height: calc(var(--sizeindex) * 0.9);
+	margin-bottom: 50px;
+}
+
+.content__table--item-tools-wrapper {
+	display: flex;
+	justify-content: flex-start;
+}
+
+.content__table--item-tools-wrapper:last-child {
+	margin-top: 20px;
+}
+
+.content__table--item-tools-description {
+	display: inline-block;
+}
+
+.content__table--item-tools-ico {
+	margin-right: 30px;
+}
+
+.content__table--item-tools-ico.alarm {
+	background-image: url(/img/alarm_ico.svg);
+	height: 30px;
+	width: 30px;
+}
+
+.content__table--item-tools-ico.money {
+	background-image: url(/img/money_ico.svg);
+	height: 26px;
+	width: 30px;
+}
+
+.content__table--item-button-wrapper {
+	display: flex;
+	justify-content: center;
+}
+
+.content__table--item-button {
+	font-weight: 700;
+	font-size: calc(var(--sizeindex) * 0.9);
+	text-align: center;
+	color: #fff;
+	background-color: #238900;
+	display: inline-block;
+	margin-top: 45px;
+	padding: 11px 25px;
+	padding-bottom: 9px;
+	box-sizing: border-box;
+	border-radius: 10px;
+	text-transform: uppercase;
+	margin-bottom: 10px;
+}
+
+.content__table--itemDecoration {
+	margin: 40px;
+	transform: translateY(-25px);
 }
