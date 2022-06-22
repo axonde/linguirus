@@ -11,7 +11,7 @@
 	--lineheight: 30px;
 	--userfont: montserrat, sans-serif;
 	--systemfont: -apple-system, BlinkMacSystemFont, Arial, sans-serif;
-	--background-color: #03663A;
+	--background-color: #036639eb;
 	--gap: 5%;
 }
 
@@ -26,6 +26,7 @@ input:required:valid, textarea:required:valid { border-color: green; }
 * {
 	padding: 0;
 	margin: 0;
+	box-sizing: border-box;
 }
 
 body {
@@ -48,7 +49,7 @@ body {
 }
 
 header {
-	background-image: url(/img/waveTop.svg);
+	background-image: url(../img/waveTop.svg);
 	min-height: 139px;
 }
 
@@ -62,7 +63,7 @@ header {
 }
 
 .header--wrapper__logo {
-	background-image: url(/img/logo.svg);
+	background-image: url(../img/logo.svg);
 	width: 192px;
 	height: 67px;
 }
@@ -127,7 +128,7 @@ header {
 .feature-1 .content__image {
 	width: calc(var(--sizeindex) * 26);
 	height: calc(var(--sizeindex) * 23);
-	background-image: url(/img/imgBack1.png);
+	background-image: url(../img/imgBack1.png);
 	background-size: contain;
 	background-repeat: no-repeat;
 }
@@ -135,7 +136,7 @@ header {
 .wave {
 	height: 130px;
 	width: 100%;
-	background-image: url(/img/smallWave.svg);
+	background-image: url(../img/smallWave.svg);
 	background-repeat: no-repeat;
 	background-size: cover;
 	margin-top: -60px;
@@ -155,7 +156,7 @@ header {
 .feature-2 .content__image {
 	width: 440px;
 	height: 295px;
-	background-image: url(/img/imgBack2.png);
+	background-image: url(../img/imgBack2.png);
 	background-size: contain;
 	background-repeat: no-repeat;
 	background-position: right;
@@ -181,7 +182,15 @@ header {
 .feature-2 .content__text--decoration {
 	float: left;
 	transform: translateY(2px);
+	display: block;
+	background-color: #fff;
+	border: #fff 1px solid;
+	height: auto;
 }
+
+.feature-2 .content__text--wrapper {
+	position: relative;
+} 
 
 /* FEATURE-3 */
 
@@ -232,7 +241,7 @@ header {
 	font-style: normal;
 	font-weight: lighter;
 	font-size: calc(var(--sizeindex)*0.9);
-	line-height: calc(var(--sizeindex) * 0.9);
+	line-height: calc(var(--sizeindex) * 1.1);
 	margin-bottom: 50px;
 }
 
@@ -246,7 +255,7 @@ header {
 }
 
 .content__table--item-tools-description {
-	display: inline-block;
+	display: block;
 }
 
 .content__table--item-tools-ico {
@@ -254,13 +263,13 @@ header {
 }
 
 .content__table--item-tools-ico.alarm {
-	background-image: url(/img/alarm_ico.svg);
+	background-image: url(../img/alarm_ico.svg);
 	height: 30px;
 	width: 30px;
 }
 
 .content__table--item-tools-ico.money {
-	background-image: url(/img/money_ico.svg);
+	background-image: url(../img/money_ico.svg);
 	height: 26px;
 	width: 30px;
 }
@@ -288,5 +297,5 @@ header {
 
 .content__table--itemDecoration {
 	margin: 40px;
-	transform: translateY(-25px);
+	transform: translateY(-50px);
 }
