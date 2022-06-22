@@ -172,9 +172,8 @@ header {
 
 .feature-2 .content__text--about {
 	display: block;
-	font-style: normal;
 	font-weight: 500;
-	font-size: 24px;
+	font-size: calc(var(--sizeindex)*1.2);
 	line-height: 29px;
 	margin-left: 40px;
 }
