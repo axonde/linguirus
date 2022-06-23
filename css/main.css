@@ -49,8 +49,23 @@ body {
 }
 
 header {
-	background-image: url(../img/waveTop.svg);
+	/* background-image: url(../img/waveTop.svg); */
 	min-height: 139px;
+	width: 100%;
+}
+
+.header__background {
+	width: 100vw;
+	position: absolute;
+	top: 0;
+	left: 0;
+	z-index: -1;
+	min-height: 139px;
+}
+
+.header__background svg {
+	height: 139px;
+	width: 100%;
 }
 
 .header--wrapper {
@@ -241,7 +256,8 @@ header {
 	font-weight: lighter;
 	font-size: calc(var(--sizeindex)*0.9);
 	line-height: calc(var(--sizeindex) * 1.1);
-	margin-bottom: 50px;
+	margin-bottom: var(--gap);
+	min-height: 120px;
 }
 
 .content__table--item-tools-wrapper {

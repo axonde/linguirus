@@ -1,8 +1,27 @@
 /* === DESKTOP FIRST === */
 
+/* xxl <= Mega extra large (xxxl) */
+
+@media (min-width: 1400px) {
+
+	/* HEADER */
+
+	.header--wrapper-large {
+		width: 1400px;
+		margin-right: auto;
+		margin-left: auto;
+	}
+
+	.header--wrapper--nav {
+		width: 805px;
+		font-size: 24px;
+	}
+
+	
+}
+
 /* xl <= Extra extra large (xxl) */
 @media (max-width : 1400px) {
-
 }
 
 /* lg <= Extra large (xl) */
