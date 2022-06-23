@@ -122,18 +122,19 @@ header {
 .feature-1 .content__text--prime {
 	position: absolute;
 	font-family: 'Montserrat Alternates', sans-serif;
-	display: flex;
+	/* display: flex; */
 	transform: rotate(-90deg) translate(-107%, 10px);
-	font-size: calc(var(--sizeindex) * 2.95);
+	font-size: calc(var(--sizeindex) * 2.8);
 	left: 0;
 	transform-origin: 0 0;
 }
 
 .feature-1 .content__text--second {
-	font-size: calc(var(--sizeindex) * 3.5);
+	font-size: calc(var(--sizeindex) * 3.4);
 	text-transform: capitalize;
 	line-height: 130%;
-	padding-left: calc(var(--gap) * 2.3);
+	margin-left: calc(var(--gap) * 2.2);
+	box-sizing: unset;
 }
 
 .feature-1 .content__text {
@@ -141,21 +142,28 @@ header {
 }
 
 .feature-1 .content__image {
-	width: calc(var(--sizeindex) * 26);
-	height: calc(var(--sizeindex) * 23);
+	width: calc(var(--sizeindex) * 25.5);
+	height: calc(var(--sizeindex) * 22.8);
 	background-image: url(../img/imgBack1.png);
+	background-position: 50% 50%;
 	background-size: contain;
 	background-repeat: no-repeat;
+	margin-left: 25px;
 }
 
 .wave {
 	height: 130px;
-	width: 100%;
-	background-image: url(../img/smallWave.svg);
-	background-repeat: no-repeat;
-	background-size: cover;
+	width: 100vw;
+	/* background-image: url(../img/smallWave.svg); */
+	/* background-repeat: no-repeat; */
+	/* background-size: cover; */
 	margin-top: -60px;
 	z-index: -1;
+}
+
+.wave svg {
+	height: 126px;
+	width: 100%;
 }
 
 /* FEATURE 2 */
