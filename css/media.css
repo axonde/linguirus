@@ -120,14 +120,18 @@
 	.content__table--itemDecoration {
 		margin-right: calc(var(--gap)*0.35);
 		margin-left: calc(var(--gap)*0.35);
-		stroke-width: 1;
 		transform: translateY(-20px);
+	}
+
+	.content__table--itemDecoration line {
+		stroke-width: 2;
 	}
 
 }
 
 /* sm <= Medium (md) */
 @media (max-width : 768px) {
+
 	.feature-1 .content__text--prime {
 		font-size: calc(var(--sizeindex) * 2.57);
 	}
@@ -161,7 +165,7 @@
 
 	/* FEATURE 2 */
 
-	
+
 }
 
 

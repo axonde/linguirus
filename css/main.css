@@ -13,6 +13,7 @@
 	--systemfont: -apple-system, BlinkMacSystemFont, Arial, sans-serif;
 	--background-color: #036639eb;
 	--gap: 5%;
+	--animation: cubic-bezier(.44,0,.26,1);
 }
 
 /* GENERAL CSS SETTINGS */
@@ -27,6 +28,12 @@ input:required:valid, textarea:required:valid { border-color: green; }
 	padding: 0;
 	margin: 0;
 	box-sizing: border-box;
+}
+
+a {
+	font-style: none;
+	color: #fff;
+	text-decoration: none;
 }
 
 body {
@@ -88,6 +95,31 @@ header {
 	justify-content: space-between;
 	text-transform: capitalize;
 	width: 67%;
+}
+
+.link__header {
+  position: relative;
+}
+
+.link__header:after {
+	content: "";
+  display: block;
+  position: absolute;
+  right: 0;
+  bottom: -3px;
+  width: 0;
+	background-color: var(--accent); /* Цвет подчеркивания при исчезании линии*/
+	height: 2px; /* Высота линии */
+  transition: width ease 0.5s; /* Время эффекта */
+}
+
+.link__header:hover:after {
+  width: 100%;
+	left: 0;
+	bottom: -3px;
+	height: 2px; /* Высота линии */
+	background-color: var(--accent); /* Цвет подчеркивания при появлении линии*/
+	transition: width 0.5s; /* Время эффекта */
 }
 
 .header--wrapper--nav__item {
@@ -327,4 +359,16 @@ header {
 	margin-left: calc(var(--gap)*0.7);
 	margin-right: calc(var(--gap)*0.7);
 	transform: translateY(-50px);
+}
+
+
+/* ANIMATION */
+
+@keyframes buttonHeader {
+	0% {
+
+	}
+	50% {
+
+	}
 }
