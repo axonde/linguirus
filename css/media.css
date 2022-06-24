@@ -166,6 +166,19 @@
 	/* FEATURE 2 */
 
 
+
+	.content__title {
+		width: 700px;
+	}
+
+	.content__table--itemDecoration line {
+		stroke-width: 1;
+	}
+
+	.content__table--item-button {
+		padding: 5px 15px;
+		padding-bottom: 4px;
+	}
 }
 
 
