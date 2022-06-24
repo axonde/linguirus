@@ -186,11 +186,11 @@ header {
 }
 
 .feature-2 .content__text {
-	max-width: 555px;
+	max-width: 50%;
 }
 
 .feature-2 .content__text h2 {
-	margin-bottom: 55px;
+	margin-bottom: calc(var(--gap)*2);
 }
 
 .feature-2 .content__text--about {
@@ -218,6 +218,10 @@ header {
 
 .feature-3 {
 	background-color: #6D4EA4;
+}
+
+.feature-3 .content {
+	padding-bottom: 40px;
 }
 
 .content__title {
@@ -256,6 +260,7 @@ header {
 	text-align: center;
 	margin-top: 10px;
 	margin-bottom: 50px;
+	word-break: break-all;
 }
 
 .content__table--item-description {
@@ -319,6 +324,7 @@ header {
 }
 
 .content__table--itemDecoration {
-	margin: 40px;
+	margin-left: calc(var(--gap)*0.7);
+	margin-right: calc(var(--gap)*0.7);
 	transform: translateY(-50px);
 }
