@@ -316,10 +316,14 @@ header {
 
 .content__table--item-tools-description {
 	display: block;
+	line-height: auto;
+	font-size: calc(var(--sizeindex)*0.9);
+	
 }
 
 .content__table--item-tools-ico {
 	margin-right: 30px;
+	background-repeat: no-repeat;
 }
 
 .content__table--item-tools-ico.alarm {
