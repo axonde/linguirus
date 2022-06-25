@@ -318,7 +318,7 @@ header {
 	display: block;
 	line-height: auto;
 	font-size: calc(var(--sizeindex)*0.9);
-	
+	line-height: normal;
 }
 
 .content__table--item-tools-ico {
