@@ -97,6 +97,12 @@ header {
 	width: 67%;
 }
 
+.header--wrapper--nav__mobile {
+	display: flex;
+	width: 100%;
+	justify-content: space-between;
+}
+
 .link__header {
   position: relative;
 }
