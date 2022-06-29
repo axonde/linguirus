@@ -41,7 +41,7 @@
 	}
 
 	.content__text--prime {
-		font-size: calc(var(--sizeindex) * 2.85) !important;
+		font-size: calc(var(--sizeindex) * 2.86) !important;
 	}
 
 	.feature-1 .content__text--second {
@@ -55,10 +55,6 @@
 
 	.wave svg {
 		height: 56px;
-	}
-
-	.feature-3 {
-		display: none;
 	}
 
 	.content__image {
@@ -91,14 +87,79 @@
 		background-position: center;
 		max-height: 205px;
 		width: 100%;
-		margin-bottom: var(--gap);
+		margin-bottom: calc(var(--gap)*1.5);
 	}
 
 	.feature-2  .content__text--about {
 		line-height: 20px;
 		margin-left: 0;
+		font-size: calc(var(--sizeindex)*1.5);
 	}
 
+	.feature-2 {
+		margin-bottom: calc(var(--gap)*2.4);
+	}
+
+	.feature-3 .content__title {
+		font-size: calc(var(--sizeindex)*2.4);
+	}
+
+	.feature-3 .content__title--wrapper {
+		margin-top: calc(var(--gap)*1.7);
+		margin-bottom: calc(var(--gap)*1.7);
+		font-weight: bold;
+	}
+
+	.feature-3 .content__table {
+		display: block;
+	}
+
+	.feature-3 .content__table--item {
+		width: 94%;
+		margin-right: auto;
+		margin-left: auto;
+	}
+
+	.feature-3 .content__table--item-header {
+		margin-bottom: var(--gap);
+		text-align: left;
+		font-size: calc(2*var(--sizeindex));
+		font-weight: 600;
+		font-size: calc(var(--sizeindex)*2.2);
+	}
+
+	.feature-3 .content__table--item-description {
+		min-height: 0;
+		font-size: calc(var(--sizeindex)*1.3);
+		font-weight: normal;
+		line-height: calc(var(--sizeindex) * 1.8);
+	}
+
+	.feature-3 .content__table--item-tools {
+		margin-top: var(--gap);
+	}
+
+	.feature-3 .content__table--item-tools-description {
+		font-size: calc(var(--sizeindex)*1.25);
+	}
+
+	.feature-3 .content__table--item-tools-ico {
+		margin-right: var(--gap);
+	}
+
+	.feature-3 .content__table--item-tools-description {
+		line-height: 24px;
+	}
+
+	.feature-3 .content__table--item-tools-wrapper:last-child {
+		margin-top: var(--gap);
+	}
+
+	.feature-3 .content__table--item-button {
+		margin-top: var(--gap);
+		padding: 3px 23px 3px 23px;
+		font-size: calc(var(--sizeindex) * 1.1);
+	}
 }
 
 /* Small (sm) */
@@ -108,6 +169,10 @@
 	}
 
 	.wave {
+		width: 320px;
+	}
+
+	.feature-3 .content__title--wrapper {
 		width: 320px;
 	}
 }

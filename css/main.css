@@ -162,7 +162,7 @@ header {
 	font-family: 'Montserrat Alternates', sans-serif;
 	/* display: flex; */
 	transform: rotate(-90deg) translate(-107%, 10px);
-	font-size: calc(var(--sizeindex) * 2.8);
+	font-size: calc(var(--sizeindex) * 2.87);
 	left: 0;
 	transform-origin: 0 0;
 }
@@ -288,6 +288,7 @@ header {
 .content__table--item {
 	width: 350px;
 	height: 100%;
+	background-color: #0404;
 }
 
 .content__table--item-header {
