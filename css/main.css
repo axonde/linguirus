@@ -288,7 +288,7 @@ header {
 .content__table--item {
 	width: 350px;
 	height: 100%;
-	background-color: #0404;
+	/* background-color: #0404; */
 }
 
 .content__table--item-header {
