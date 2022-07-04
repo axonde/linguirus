@@ -174,7 +174,7 @@
 	.feature-3 .content__table--item-button {
 		margin-top: var(--gap);
 		padding: 4px 23px 4px 23px;
-		font-size: calc(var(--sizeindex) * 1.1);
+		font-size: calc(var(--sizeindex) * 1.5);
 	}
 
 	.feature-3 .content__table--item.reverse .content__table--item-header {

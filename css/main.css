@@ -103,6 +103,58 @@ header {
 	justify-content: space-between;
 }
 
+.header--wrapper--nav__mobile__burger,
+.header--wrapper--nav__mobile__contact {
+	cursor: pointer;
+}
+
+.header--wrapper--nav__mobile__burger {
+	z-index: 2;
+}
+
+.header--wraper--nav__mobile__burgerMenu {
+	width: 100vw;
+	height: 100vh;
+	background-color: #654C93;
+	position: fixed;
+	z-index: 1;
+	top: 0;
+	left: 0;
+	display: flex !important;
+	flex-direction: column;
+	justify-content: space-around;
+	padding: 40px 0;
+	/* visibility: hidden; */
+	transform: translateX(-100%);
+	transition: all 0.3s var(--animation);
+}
+
+.header--wraper--nav__mobile__burgerMenu.active {
+	/* visibility: visible; */
+	transform: translateX(0);
+	transition: all 0.3s var(--animation);
+}
+
+.header--wraper--nav__mobile__burgerMenu span {
+	position: relative;
+	margin-left: 50px;
+	font-size: calc(var(--sizeindex)*3);
+	font-weight: bold;
+}
+
+.header--wraper--nav__mobile__burgerMenu span::before {
+	content: "";
+	position: absolute;
+	top: 50%;
+	left: -30px;
+	width: 14px;
+	height: 14px;
+	border-radius: 100%;
+	background-color: var(--accent);
+	transform: translateY(-5px);
+}
+
+
 .link__header {
   position: relative;
 }
