@@ -550,4 +550,20 @@
 		line-height: 0;
 		margin-bottom: 77px;
 	}
+
+	.featureItem__slider.big {
+		width: 1243px;
+		height: 606.73px;
+		margin: 0 auto;
+	}
+
+	.featureItem__description--main {
+		line-height: 43.88px;
+		font-size: 36px;
+	}
+
+	.featureItem__description--collateral {
+		line-height: 29.26px;
+		font-size: 24px;
+	}
 }
