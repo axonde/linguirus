@@ -176,8 +176,8 @@
 	}
 
 	.feature-3 .content__table--item-button {
-		margin-top: var(--gap);
-		padding: 10px 25px 10px 25px;
+		margin-top: calc(2 * var(--gap));
+		padding: 9px 25px 9px 25px;
 		font-size: calc(var(--sizeindex) * 1.5);
 	}
 
@@ -286,7 +286,7 @@
 	}
 
 	.featureItem--wrapper {
-		padding-bottom: 0;
+		/* padding-bottom: 0; */
 	}
 }
 
