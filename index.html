@@ -24,7 +24,43 @@
 	<link rel="stylesheet" href="css/main.css">
 	<link rel="stylesheet" href="css/media.css">
 
+	<link rel="preconnect" href="https://fonts.googleapis.com"> 
+
 	<script src="script.js" defer></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+
+	<script type="text/javascript" defer>
+		$(document).ready(function(){
+				$("#menu__header").on("click","a", function (event) {
+						event.preventDefault();
+						var id  = $(this).attr('href'),
+								top = $(id).offset().top;
+						$('body,html').animate({scrollTop: top}, 1000);
+				});
+		});
+	</script>
+
+	<script type="text/javascript" defer>
+		$(document).ready(function(){
+				$("#link__english").on("click","a", function (event) {
+						event.preventDefault();
+						var id  = $(this).attr('href'),
+								top = $(id).offset().top;
+						$('body,html').animate({scrollTop: top}, 1000);
+				});
+		});
+	</script>
+
+	<script type="text/javascript" defer>
+		$(document).ready(function(){
+				$("#link__footer").on("click","a", function (event) {
+						event.preventDefault();
+						var id  = $(this).attr('href'),
+								top = $(id).offset().top;
+						$('body,html').animate({scrollTop: top}, 1000);
+				});
+		});
+	</script>
 
 </head>
 
@@ -48,11 +84,11 @@
 
 				<div class="header--wrapper__logo"></div>
 
-				<div class="header--wrapper--nav">
+				<div class="header--wrapper--nav" id="menu__header">
 					<div class="header--wrapper--nav__item"><a class="link__header" href="#tools">формат занятий</a></div>
-					<div class="header--wrapper--nav__item"><a class="link__header" href="#">английский</a></div>
-					<div class="header--wrapper--nav__item"><a class="link__header" href="#">французский</a></div>
-					<div class="header--wrapper--nav__item"><a class="link__header" href="#">крафт</a></div>
+					<div class="header--wrapper--nav__item"><a class="link__header" href="#english">английский</a></div>
+					<div class="header--wrapper--nav__item"><a class="link__header" href="#french">французский</a></div>
+					<div class="header--wrapper--nav__item"><a class="link__header" href="#craft">крафт</a></div>
 				</div>
 
 				<div class="header--wrapper--nav__mobile">
@@ -63,11 +99,13 @@
 						</svg>
 					</div>
 
+
+					<!-- MOBILE -->
 					<div class="header--wraper--nav__mobile__burgerMenu mobile">
 						<span class="btn-item"><a href="#tools" class="link__header">Форматы занятий</a></span>
-						<span class="btn-item"><a href="#" class="link__header">Английский</a></span>
-						<span class="btn-item"><a href="#" class="link__header">Французский</a></span>
-						<span class="btn-item"><a href="#" class="link__header">Крафт</a></span>
+						<span class="btn-item"><a href="#english" class="link__header">Английский</a></span>
+						<span class="btn-item"><a href="#french" class="link__header">Французский</a></span>
+						<span class="btn-item"><a href="#craft" class="link__header">Крафт</a></span>
 					</div>
 				
 					<div class="header--wrapper--nav__mobile__logo">
@@ -84,7 +122,7 @@
 						</svg>	
 					</div>
 					<div class="header--wrapper--nav__mobile__contact button">
-						<svg width="26" height="26" viewBox="0 0 26 26" fill="none" xmlns="http://www.w3.org/2000/svg">
+						<svg class="button" width="26" height="26" viewBox="0 0 26 26" fill="none" xmlns="http://www.w3.org/2000/svg">
 							<path d="M1.58747 19.9338C1.58747 19.9377 1.58747 19.9449 1.58301 19.955C1.58468 19.9483 1.5858 19.941 1.58747 19.9338ZM22.7652 20.8507C22.5815 20.8468 22.4 20.8089 22.23 20.7391L19.0611 19.6156L19.0377 19.6062C18.9686 19.5774 18.8943 19.5629 18.8195 19.5637C18.7505 19.5638 18.682 19.5763 18.6174 19.6006C18.5404 19.6296 17.8467 19.8902 17.1189 20.09C16.7243 20.1983 15.3508 20.5516 14.2486 20.5516C11.4313 20.5516 8.79705 19.4689 6.83197 17.5027C5.87198 16.5486 5.11077 15.4135 4.5924 14.1633C4.07403 12.913 3.80881 11.5723 3.81207 10.2189C3.81205 9.51364 3.88802 8.81047 4.03866 8.12152C4.52923 5.8545 5.8285 3.79231 7.69702 2.31725C9.61375 0.813738 11.98 -0.00232227 14.416 4.96381e-06C17.3299 4.96381e-06 20.0451 1.11621 22.062 3.13543C23.9685 5.04805 25.0133 7.56286 25.0049 10.2161C25.0033 12.1876 24.4146 14.114 23.3139 15.7497L23.3033 15.7653L23.262 15.8211C23.2525 15.8339 23.243 15.8462 23.2341 15.8591L23.2257 15.8741C23.2035 15.9119 23.1834 15.9508 23.1654 15.9908L24.0439 19.1128C24.0827 19.2416 24.1037 19.3751 24.1064 19.5096C24.1066 19.6858 24.072 19.8603 24.0047 20.0231C23.9374 20.1859 23.8386 20.3338 23.7141 20.4584C23.5895 20.583 23.4415 20.6818 23.2787 20.7491C23.1159 20.8164 22.9414 20.8509 22.7652 20.8507Z" fill="white"/>
 							<path d="M14.9499 21.9552C14.8923 21.8431 14.8111 21.7446 14.712 21.6666C14.6129 21.5886 14.4982 21.5329 14.3756 21.5032C14.0531 21.4178 13.6769 21.4323 13.3895 21.4111C10.6756 21.2224 8.12178 20.0577 6.19999 18.1322C4.4915 16.4333 3.38115 14.2253 3.03611 11.8407C2.95797 11.2971 2.95797 11.1621 2.95797 11.1621C2.95794 10.9807 2.90268 10.8037 2.79955 10.6545C2.69641 10.5053 2.5503 10.391 2.38064 10.3269C2.21098 10.2628 2.02583 10.2519 1.84981 10.2956C1.67378 10.3393 1.51525 10.4356 1.39528 10.5716C1.39528 10.5716 0.9555 11.0505 0.747885 11.531C0.165606 12.8726 -0.0827123 14.3354 0.0242093 15.794C0.131131 17.2526 0.590104 18.6635 1.3618 19.9059C1.50691 20.1475 1.50691 20.2592 1.47454 20.5103C1.32217 21.2978 1.0554 22.6869 0.916432 23.4074C0.87042 23.6411 0.887536 23.8828 0.966014 24.1076C1.04449 24.3325 1.1815 24.5323 1.36291 24.6866L1.38859 24.7084C1.62858 24.899 1.92597 25.0028 2.23244 25.003C2.40482 25.0032 2.57553 24.9692 2.73473 24.9031L5.72114 23.7507C5.82396 23.7116 5.93755 23.7116 6.04037 23.7507C7.2163 24.1882 8.44022 24.4204 9.59995 24.4204C11.045 24.4217 12.4725 24.1043 13.7807 23.4906C14.0854 23.3477 14.562 23.1925 14.8411 22.87C14.9467 22.7448 15.0133 22.5915 15.0326 22.4289C15.052 22.2663 15.0232 22.1016 14.9499 21.9552Z" fill="white"/>
 						</svg>
@@ -257,7 +295,7 @@
 
 
 		<!--FEATURE 4-->
-		<div class="featureItem">
+		<div class="featureItem" id="english">
 			<div class="featureItem--wrapper">
 				<div class="featureItem__header">Английский</div>
 
@@ -266,8 +304,8 @@
 						<!--SLIDER FUNCTIONAL SYSTEM-->
 					</div>
 
-					<div class="featureItem__description">
-						Занятия адаптируются под потребности обучающегося, подробнее о форматах <span class="link"><a href="#">здесь</a></span>. Упражнения успешных методик Oxford, Cambridge, Просвещение и других издательств составляют содержание занятий.  Для комфорта восприятия и запоминания слов используется карточная техника (подробнее <span class="link"><a href="#">здесь</a></span>).
+					<div class="featureItem__description" id="link__english">
+						Занятия адаптируются под потребности обучающегося, подробнее о форматах <span class="link"><a href="#tools">здесь</a></span>. Упражнения успешных методик Oxford, Cambridge, Просвещение и других издательств составляют содержание занятий.  Для комфорта восприятия и запоминания слов используется карточная техника (подробнее <span class="link"><a href="#craft">здесь</a></span>).
 					</div>
 				</div>
 
@@ -277,7 +315,7 @@
 
 
 		<!-- FEATURE-5 -->
-		<div class="featureItem reverse">
+		<div class="featureItem reverse" id="french">
 			<div class="featureItem--wrapper">
 				<div class="featureItem__header">Французский</div>
 
@@ -287,7 +325,7 @@
 					</div>
 
 					<div class="featureItem__description">
-						Начинающим изучать французский язык будет предложена французская разлиновка тетради, отличающаяся от русской. В содержание занятий входят упражнения, разработанные издательскими домами Nathan, Larousse, Просвещение и другими. Подробнее о форматах занятий по французскому языку <span class="link"><a href="#">здесь</a></span>.
+						Начинающим изучать французский язык будет предложена французская разлиновка тетради, отличающаяся от русской. В содержание занятий входят упражнения, разработанные издательскими домами Nathan, Larousse, Просвещение и другими. Подробнее о форматах занятий по французскому языку <span class="link button"><a href="#">здесь</a></span>.
 					</div>
 				</div>
 
@@ -297,7 +335,7 @@
 
 
 		<!-- FEATURE 6 -->
-		<div class="feature-6">
+		<div class="feature-6" id="craft">
 			<div class="featureItem--wrapper">
 				<div class="featureItem__header">Крафт-карточки</div>
 
@@ -305,8 +343,8 @@
 				<div class="featureItem__slider big"></div>
 
 				<div class="featureItem__description--wrapper">
-					<div class="featureItem__description--main">
-						Предлагаем Вашему вниманию карточки, которые можно легко сделать из подручных средств или заказать <span class="link"><a href="#">здесь</a></span>. 
+					<div class="featureItem__description--main glideScrolling">
+						Предлагаем Вашему вниманию карточки, которые можно легко сделать из подручных средств или заказать <span class="link button"><a href="#">здесь</a></span>. 
 					</div>
 					<div class="featureItem__description--collateral--wrapper">
 						<div class="featureItem__description--collateral" id="collateralText">
@@ -319,9 +357,28 @@
 			</div>
 		</div>
 
-		ASDF!!!
+		<div class="line-design"></div>
 
-		The contact and footer section are being designed, comming soon!
+		<footer>
+			<div class="footer-wrapper">
+				<div class="copyright">
+					© LINGUIRUS <br> 2021-2022
+				</div>
+
+				<div class="short-link" id="link__footer">
+					<ul>
+						<li><a class="link__header" href="#tools">Виды услуг</a></li>
+						<li><a class="link__header" href="#english">Английский</a></li>
+						<li><a class="link__header" href="#french">Французский</a></li>
+						<li><a class="link__header" href="#craft">Крафт</a></li>
+					</ul>
+				</div>
+
+				<div class="web-studio">Разработка сайта: <br> <span class="link"><a href="https://t.me/axondee">@axondee</a></span></div>
+
+				<div class="license">Все правы защищены</div>
+			</div>
+		</footer>
 	</main>
 
 </body>

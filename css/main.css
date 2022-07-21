@@ -48,6 +48,10 @@ body {
 	background-color: var(--background-color);
 }
 
+li {
+	list-style: none;
+}
+
 /* USER STYLES */
 
 .accent {
@@ -527,6 +531,7 @@ header {
 	display: flex;
 	justify-content: space-between;
 	margin: var(--gap) calc(var(--gap) * 2);
+	margin-bottom: 0;
 }
 
 .featureItem__description--main {
@@ -555,6 +560,31 @@ header {
 	position: absolute;
 }
 
+.line-design {
+	height: 2px;
+	width: calc(100vw - 2*var(--gap));
+	background-color: #66B08F;
+	margin: 0 auto;
+}
+
+footer {
+	margin: var(--gap) var(--gap);
+	font-size: var(--sizeindex);
+}
+
+.footer-wrapper {
+	display: flex;
+	align-items: flex-start;
+	justify-content: space-between;
+}
+
+.short-link li {
+	margin-bottom: 10px;
+}
+
+.web-studio {
+	line-height: 1.5;
+}
 
 
 /* ANIMATION */

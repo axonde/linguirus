@@ -285,8 +285,25 @@
 		left: -10px;
 	}
 
-	.featureItem--wrapper {
-		/* padding-bottom: 0; */
+	.footer-wrapper {
+		flex-direction: row;
+		width: 100%;
+		flex-wrap: wrap;
+		justify-content: flex-start;
+	}
+
+	.footer-wrapper > * {
+		margin-left: var(--gap);
+		line-height: 1.5;
+	}
+
+	.footer-wrapper li {
+		margin-bottom: 5px;
+	}
+
+	.license {
+		justify-content: center;
+		margin-top: 10px;
 	}
 }
 

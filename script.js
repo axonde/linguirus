@@ -39,6 +39,7 @@ var burgerItems = burgerMenu.querySelectorAll('.btn-item a');
 burger.addEventListener("click", function() {
 	console.log("click on burger");
 	burgerMenu.classList.toggle("active");
+	burgerMenu.classList.contains("active") ? burger.setAttribute('style', 'position: fixed;') : burger.setAttribute('style', 'position: inherit;');
 });
 
 for (let i=0; i < burgerItems.length; i++) {
@@ -54,7 +55,6 @@ contact.addEventListener("click", function() {
 
 //for booking
 for (let i=2; i < buttons.length; i++) {
-	console.log(buttons[i]);
 	buttons[i].addEventListener("click", function() {
 			alert("⚠️ ЗАПИСЬ НЕДОСТУПНА / BOOKING NOT AVAILABLE ⚠️")
 	});
