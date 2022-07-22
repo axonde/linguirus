@@ -25,10 +25,14 @@
 	<link rel="stylesheet" href="css/media.css">
 
 	<link rel="preconnect" href="https://fonts.googleapis.com"> 
+	<link rel="stylesheet" href="libs/swiper/swiper-bundle.min.css"></link>
 
 	<script src="script.js" defer></script>
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
 
+
+
+	<!-- GLIDE SCROLLING -->
 	<script type="text/javascript" defer>
 		$(document).ready(function(){
 				$("#menu__header").on("click","a", function (event) {
@@ -39,7 +43,6 @@
 				});
 		});
 	</script>
-
 	<script type="text/javascript" defer>
 		$(document).ready(function(){
 				$("#link__english").on("click","a", function (event) {
@@ -50,7 +53,6 @@
 				});
 		});
 	</script>
-
 	<script type="text/javascript" defer>
 		$(document).ready(function(){
 				$("#link__footer").on("click","a", function (event) {
@@ -300,9 +302,46 @@
 				<div class="featureItem__header">Английский</div>
 
 				<div class="featureItem__slideDesc--wrapper">
-					<div class="featureItem__slider">
-						<!--SLIDER FUNCTIONAL SYSTEM-->
+
+				<!--SLIDER FUNCTIONAL SYSTEM-->
+				<div class="featureItem__slider">
+
+					<div class="swiper-wrapper">
+						<div class="swiper-slide slide-item" id="english">
+							<div class="img" style="background: url(img/slider-images/english-1.jpeg);"></div>
+						</div>
+						<div class="swiper-slide slide-item" id="english">
+							<div class="img" style="background: url(img/slider-images/english-2.jpeg);"></div>
+						</div>
+						<div class="swiper-slide slide-item" id="english">
+							<div class="img" style="background: url(img/slider-images/english-3.jpeg);"></div>
+						</div>
+						<div class="swiper-slide slide-item" id="english">
+							<div class="img" style="background: url(img/slider-images/english-4.jpeg);"></div>
+						</div>
+						<div class="swiper-slide slide-item" id="english">
+							<div class="img" style="background: url(img/slider-images/english-5.jpeg)"></div>
+						</div>
+						<div class="swiper-slide slide-item" id="english">
+							<div class="img" style="background: url(img/slider-images/english-6.jpeg);"></div>
+						</div>
+						<div class="swiper-slide slide-item" id="english">
+							<div class="img" style="background: url(img/slider-images/english-7.jpeg);"></div>
+						</div>
+						<div class="swiper-slide slide-item" id="english">
+							<div class="img" style="background: url(img/slider-images/english-8.jpeg);"></div>
+						</div>
+						<div class="swiper-slide slide-item" id="english">
+							<div class="img" style="background: url(img/slider-images/english-9.jpeg);"></div>
+						</div>
 					</div>
+							
+ 					<div class="swiper-pagination"></div>
+
+					<div class="swiper-button-prev"></div>
+					<div class="swiper-button-next"></div>
+
+				</div>
 
 					<div class="featureItem__description" id="link__english">
 						Занятия адаптируются под потребности обучающегося, подробнее о форматах <span class="link"><a href="#tools">здесь</a></span>. Упражнения успешных методик Oxford, Cambridge, Просвещение и других издательств составляют содержание занятий.  Для комфорта восприятия и запоминания слов используется карточная техника (подробнее <span class="link"><a href="#craft">здесь</a></span>).
@@ -320,8 +359,29 @@
 				<div class="featureItem__header">Французский</div>
 
 				<div class="featureItem__slideDesc--wrapper reverse">
+
+					<!-- SLIDER -->
 					<div class="featureItem__slider reverse">
-						<!--SLIDER FUNCTIONAL SYSTEM-->
+
+						<div class="swiper-wrapper">
+							<div class="swiper-slide slide-item" id="english">
+								<div class="img" style="background: url(img/slider-images/temp.jpeg);"></div>
+							</div>
+							<div class="swiper-slide slide-item" id="english">
+								<div class="img" style="background: url(img/slider-images/temp.jpeg);"></div>
+							</div>
+							<div class="swiper-slide slide-item" id="english">
+								<div class="img" style="background: url(img/slider-images/temp.jpeg);"></div>
+							</div>
+							<div class="swiper-slide slide-item" id="english">
+								<div class="img" style="background: url(img/slider-images/temp.jpeg);"></div>
+							</div>
+						</div>
+							
+ 						<div class="swiper-pagination"></div>
+
+						<div class="swiper-button-prev"></div>
+						<div class="swiper-button-next"></div>
 					</div>
 
 					<div class="featureItem__description">
@@ -340,7 +400,29 @@
 				<div class="featureItem__header">Крафт-карточки</div>
 
 				<!--SLIDER FUNCTIONAL SYSTEM-->
-				<div class="featureItem__slider big"></div>
+				<div class="featureItem__slider big">
+				<!-- SLIDER -->
+
+					<div class="swiper-wrapper">
+						<div class="swiper-slide slide-item" id="english">
+							<div class="img" style="background: url(img/slider-images/temp.jpeg);"></div>
+						</div>
+						<div class="swiper-slide slide-item" id="english">
+							<div class="img" style="background: url(img/slider-images/temp.jpeg);"></div>
+						</div>
+						<div class="swiper-slide slide-item" id="english">
+							<div class="img" style="background: url(img/slider-images/temp.jpeg);"></div>
+						</div>
+						<div class="swiper-slide slide-item" id="english">
+							<div class="img" style="background: url(img/slider-images/temp.jpeg);"></div>
+						</div>
+					</div>
+						
+ 					<div class="swiper-pagination"></div>
+
+					<div class="swiper-button-prev"></div>
+					<div class="swiper-button-next"></div>
+				</div>
 
 				<div class="featureItem__description--wrapper">
 					<div class="featureItem__description--main glideScrolling">
@@ -380,6 +462,9 @@
 			</div>
 		</footer>
 	</main>
+
+
+	<script src="libs/swiper/swiper-bundle.min.js"></script>
 
 </body>
 </html>

@@ -25,6 +25,22 @@ function setHeight__collateral() {
 }
 
 
+// SWIPER SYSTEM
+
+const swiper = new Swiper('.featureItem__slider', {
+	loop: true,
+	speed: 1800,
+	cssMode: true,
+	pagination: {
+    el: '.swiper-pagination',
+  },
+	navigation: {
+    nextEl: '.swiper-button-next',
+    prevEl: '.swiper-button-prev',
+  }
+});
+
+
 // обработчик событий кнопок
 
 var buttons = document.querySelectorAll('.button');
