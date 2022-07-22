@@ -226,6 +226,7 @@
 		/* min-width: calc(100vw - 2*var(--gap)); */
 		width: 100%;
 		margin-right: 0;
+		height: calc(var(--sizeindex)*35);
 		flex-basis: calc(var(--sizeindex)*35);
 	}
 
