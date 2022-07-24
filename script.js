@@ -63,6 +63,7 @@ burger.addEventListener("click", function() {
 for (let i=0; i < burgerItems.length; i++) {
 	burgerItems[i].addEventListener("click", function() {
 		burgerMenu.classList.toggle("active");
+		burgerMenu.classList.contains("active") ? burger.setAttribute('style', 'position: fixed;') : burger.setAttribute('style', 'position: inherit;');
 	});
 }
 
