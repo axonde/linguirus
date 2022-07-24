@@ -26,19 +26,21 @@ function setHeight__collateral() {
 
 
 // SWIPER SYSTEM
+document.addEventListener('DOMContentLoaded', function() {
 
-const swiper = new Swiper('.featureItem__slider', {
-	loop: true,
-	speed: 1800,
-	cssMode: true,
-	pagination: {
-    el: '.swiper-pagination',
-  },
-	navigation: {
-    nextEl: '.swiper-button-next',
-    prevEl: '.swiper-button-prev',
-  }
-});
+	const swiper = new Swiper('.featureItem__slider', {
+		loop: true,
+		speed: 1200,
+		slidesPerView: '1',
+		pagination: {
+			el: '.swiper-pagination',
+		},
+		navigation: {
+			nextEl: '.swiper-button-next',
+			prevEl: '.swiper-button-prev',
+		}
+	})
+})
 
 
 // обработчик событий кнопок
