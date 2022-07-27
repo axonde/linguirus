@@ -365,7 +365,7 @@ header {
 	font-size: calc(var(--sizeindex)*0.9);
 	line-height: calc(var(--sizeindex) * 1.1);
 	margin-bottom: var(--gap);
-	min-height: 120px;
+	min-height: 130px;
 }
 
 .content__table--item-tools-wrapper {

@@ -55,6 +55,16 @@
 	</script>
 	<script type="text/javascript" defer>
 		$(document).ready(function(){
+				$("#link__french").on("click","a", function (event) {
+						event.preventDefault();
+						var id  = $(this).attr('href'),
+								top = $(id).offset().top;
+						$('body,html').animate({scrollTop: top}, 1000);
+				});
+		});
+	</script>
+	<script type="text/javascript" defer>
+		$(document).ready(function(){
 				$("#link__footer").on("click","a", function (event) {
 						event.preventDefault();
 						var id  = $(this).attr('href'),
@@ -206,7 +216,7 @@
 						<div class="content__table--item-header">20 минут</div>
 
 						<div class="content__table--item-description">
-							Занятия проходят по слайдам с аудио-звонком. Адаптированы к Вашему уровню языка. Длительность - 20 минут.
+							Онлайн осуществляется беседа на английском или французском в течение 20 минут с переводом на русский.
 						</div>
 
 						<div class="content__table--item-tools">
@@ -239,7 +249,7 @@
 						<div class="content__table--item-header">Ежедневно</div>
 
 						<div class="content__table--item-description">
-							Короткие ежедневные задания на тренировку лексики, грамматики и аудирования. Высылаются на телефон.
+							Онлайн доставка слайда каждый день с возможностью обратной связи. Слайды иллюстрируют текст рассказа, грамматические упражнения или аудиозаписи.
 						</div>
 
 						<div class="content__table--item-tools">
@@ -272,7 +282,7 @@
 						<div class="content__table--item-header">Видео</div>
 
 						<div class="content__table--item-description">
-							Короткие видео-файлы для просмотра с заданиями.
+							Онлайн доставка коротких видео-файлов на английском или французском с возможностью обратной связи.
 						</div>
 
 						<div class="content__table--item-tools">
@@ -344,7 +354,7 @@
 				</div>
 
 					<div class="featureItem__description" id="link__english">
-						Занятия адаптируются под потребности обучающегося, подробнее о форматах <span class="link"><a href="#tools">здесь</a></span>. Упражнения успешных методик Oxford, Cambridge, Просвещение и других издательств составляют содержание занятий.  Для комфорта восприятия и запоминания слов используется карточная техника (подробнее <span class="link"><a href="#craft">здесь</a></span>).
+						На занятиях используется слайдовый метод: обучающийся получает набор визуальных опор и в телефонном разговоре прорабатывает их. Упражнения известных методик Oxford, Cambridge, Просвещение и других издательств составляют содержание занятий. В конце каждого занятия предлагается письменное задание с последующей проверкой.
 					</div>
 				</div>
 
@@ -364,17 +374,32 @@
 					<div class="featureItem__slider reverse">
 
 						<div class="swiper-wrapper">
-							<div class="swiper-slide slide-item" id="english">
-								<div class="img" style="background: url(img/slider-images/temp.jpeg);"></div>
+							<div class="swiper-slide slide-item">
+								<div class="img" style="background: url(img/slider-images/french-1.jpeg);"></div>
 							</div>
-							<div class="swiper-slide slide-item" id="english">
-								<div class="img" style="background: url(img/slider-images/temp.jpeg);"></div>
+							<div class="swiper-slide slide-item">
+								<div class="img" style="background: url(img/slider-images/french-2.jpeg);"></div>
 							</div>
-							<div class="swiper-slide slide-item" id="english">
-								<div class="img" style="background: url(img/slider-images/temp.jpeg);"></div>
+							<div class="swiper-slide slide-item">
+								<div class="img" style="background: url(img/slider-images/french-3.jpeg);"></div>
 							</div>
-							<div class="swiper-slide slide-item" id="english">
-								<div class="img" style="background: url(img/slider-images/temp.jpeg);"></div>
+							<div class="swiper-slide slide-item">
+								<div class="img" style="background: url(img/slider-images/french-4.jpeg);"></div>
+							</div>
+							<div class="swiper-slide slide-item">
+								<div class="img" style="background: url(img/slider-images/french-5.jpeg);"></div>
+							</div>
+							<div class="swiper-slide slide-item">
+								<div class="img" style="background: url(img/slider-images/french-6.jpeg);"></div>
+							</div>
+							<div class="swiper-slide slide-item">
+								<div class="img" style="background: url(img/slider-images/french-7.jpeg);"></div>
+							</div>
+							<div class="swiper-slide slide-item">
+								<div class="img" style="background: url(img/slider-images/french-8.jpeg);"></div>
+							</div>
+							<div class="swiper-slide slide-item">
+								<div class="img" style="background: url(img/slider-images/french-9.jpeg);"></div>
 							</div>
 						</div>
 							
@@ -384,8 +409,8 @@
 						<div class="swiper-button-next"></div>
 					</div>
 
-					<div class="featureItem__description">
-						Начинающим изучать французский язык будет предложена французская разлиновка тетради, отличающаяся от русской. В содержание занятий входят упражнения, разработанные издательскими домами Nathan, Larousse, Просвещение и другими. Подробнее о форматах занятий по французскому языку <span class="link button"><a href="#">здесь</a></span>.
+					<div class="featureItem__description" id="link__french">
+						В крафт-карточках соблюдена французская разлиновка листа, отличающаяся от русской. Слайды иллюстрируют упражнения, разработанные издательскими домами Nathan, Larousse, Просвещение и другими. В конце беседы на французском предлагается письменный перевод фрагмента разговора.
 					</div>
 				</div>
 
@@ -430,7 +455,7 @@
 					</div>
 					<div class="featureItem__description--collateral--wrapper">
 						<div class="featureItem__description--collateral" id="collateralText">
-							Цель использования такого метода в ускорении запоминания написания слов. На обратной стороне каждой карточки необходимой раз в день переписать слово по образцу. Через 3 дня Вы сможете слова по памяти. 
+							Доказано, что запоминание новых слов неразрывно связано с образом, связанным со значением слова. Крафт-карточки представляют собой бумажное изделие с картинкой и примером написания слова на обратной стороне.
 						</div>
 
 						<div class="featureItem__description--collateral--design not-visible-for-mobile" id="collateralElement"></div>
