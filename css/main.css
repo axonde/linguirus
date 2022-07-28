@@ -688,8 +688,8 @@ footer {
 }
 
 .btn-cancel {
-	height: 40px;
-	width: 40px;
+	height: 30px;
+	width: 30px;
 	position: absolute;
 	right: 2%;
 	top: 2%;
@@ -717,7 +717,7 @@ footer {
 	color: #000000;
 	font-weight: bold;
 	margin: 0 auto;
-	margin-bottom: calc(var(--gap) * 0.5);
+	margin-bottom: calc(var(--gap) * 0.8);
 	display: block;
 	font-size: calc(var(--sizeindex) * 2);
 	width: min-content;
@@ -730,19 +730,17 @@ footer {
 }
 
 .form-items {
-	background-color: rgb(255, 216, 216);
 	margin: var(--gap) 0;
 	justify-content: space-between;
 	align-items: top;
 	flex-direction: row;
 	display: flex;
 	color: black;
+	height: calc(10 * var(--sizeindex));
 }
 
 .column-1 {
 	width: 45%;
-	height: calc(9 * var(--sizeindex));
-	background-color: rgb(174, 174, 174);
 	display: flex;
 	flex-direction: column;
 	justify-content: space-between;
@@ -760,4 +758,61 @@ input {
 	height: calc(1.7 * var(--sizeindex));
 	border: 2px solid #000000;
 	border-radius: 5px;
+	padding: 0 3%;
+	font-size: calc(0.8 * var(--sizeindex));
+}
+
+input::placeholder,
+textarea::placeholder {
+	font-family: 'Montserrat';
+	font-style: normal;
+	font-weight: 500;
+	color: #9A9A9A;	
+}
+
+.column-2 {
+	width: 45%;
+	display: flex;
+	flex-direction: column;
+}
+
+textarea {
+	height: 100%;
+	margin-top: 20px;
+	border: 2px solid #000000;
+	border-radius: 5px;
+	resize: none;
+	padding: 3% 3%;
+	font-size: calc(0.8 * var(--sizeindex));
+}
+
+.btn-submit {
+	margin: 0 auto;
+	display: block;
+	padding: calc(0.7 * var(--sizeindex)) calc(1.8 * var(--sizeindex));
+	outline: none;
+	border: none;
+	background-color: #238900;
+	border-radius: 8px;
+	color: #FFFFFF;
+	font-family: 'Montserrat';
+	font-style: normal;
+	font-weight: 600;
+	font-size: calc(0.8 * var(--sizeindex));
+	cursor: pointer;
+	/* margin-top: calc(1.1 * var(--gap)); */
+	transition: all var(--animation) 0.4s;
+}
+
+.btn-submit:hover {
+	box-shadow: 0px 0px 40px rgba(0, 0, 0, 0.4);
+	background-color: #1a6700;
+}
+
+.beautiful-Flex__wrapper {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-around;
+	height: 75%;
+	width: 100%;
 }
