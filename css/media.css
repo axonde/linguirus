@@ -607,4 +607,50 @@
 		font-size: 20px;
 		line-height: 1.5;
 	}
+
+	.form-container {
+		width: 1200px;
+		height: 92vh;
+		min-height: 600px;
+		margin-top: 4vh;
+	}
+
+	.btn-cancel {
+		right: 20px;
+		top: 20px;
+	}
+
+	.form-container h2 {
+		margin-bottom: 38px;
+		font-size: 44.18px;
+	}
+
+	.alert-text {
+		font-size: 18.41px;
+	}
+
+	.form-items {
+		margin: 60px 0;
+		max-height: 400px;
+		min-height: 240px;
+	}
+	
+	input {
+		height: 50px;
+		font-size: 18.41px;
+	}
+
+	textarea {
+		height: 100%;
+		margin-top: 20px;
+		border: 2px solid #000000;
+		border-radius: 5px;
+		resize: none;
+		padding: 3% 3%;
+		font-size: 18.41px;
+	}
+
+	label {
+		font-size: 22.09px;
+	}
 }
