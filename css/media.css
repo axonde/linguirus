@@ -613,6 +613,7 @@
 		height: 92vh;
 		min-height: 600px;
 		margin-top: 4vh;
+		max-height: 850px;
 	}
 
 	.btn-cancel {
@@ -652,5 +653,10 @@
 
 	label {
 		font-size: 22.09px;
+	}
+
+	.btn-submit {
+		padding: 14px 30px;
+		font-size: 22px;
 	}
 }
