@@ -705,12 +705,12 @@ footer {
 
 .btn-cancel svg:hover,
 .btn-cancel svg:hover > * {
-	fill: rgb(0, 0, 0);
+	fill: #c50000;
 	stroke: white;
 }
 
 .btn-cancel svg:hover path:nth-child(1) {
-	stroke: #000000;
+	stroke: #c50000;
 }
 
 .form-container h2 {
