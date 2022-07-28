@@ -71,10 +71,24 @@ contact.addEventListener("click", function() {
 	console.log("click on contact");
 });
 
-
 //for booking
 for (let i=2; i < buttons.length; i++) {
 	buttons[i].addEventListener("click", function() {
-			alert("⚠️ ЗАПИСЬ НЕДОСТУПНА / BOOKING NOT AVAILABLE ⚠️")
+		document.getElementById("form").style.display = "block";
+		setTimeout(visible, 100);
+		function visible() {
+			document.getElementById("form").classList.toggle("form-popup__hidden");
+		}
 	});
+}
+
+function closeForm() {
+	setTimeout(hidden, 100);
+	function hidden() {
+		document.getElementById("form").classList.toggle("form-popup__hidden");
+	}
+	setTimeout(closePopup, 600);
+	function closePopup() {
+		document.getElementById("form").style.display = "none";
+	}
 }
