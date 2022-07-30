@@ -225,10 +225,8 @@ header {
 
 .feature-1 .content__text--second {
 	font-size: calc(var(--sizeindex) * 3.4);
-	text-transform: capitalize;
 	line-height: 130%;
 	margin-left: calc(var(--gap) * 2.2);
-	box-sizing: unset;
 }
 
 .feature-1 .content__text {
@@ -364,8 +362,8 @@ header {
 	font-weight: lighter;
 	font-size: calc(var(--sizeindex)*0.9);
 	line-height: calc(var(--sizeindex) * 1.1);
-	margin-bottom: var(--gap);
-	min-height: 130px;
+	margin-bottom: calc(var(--gap) * 2.5);
+	/* min-height: 130px; */
 }
 
 .content__table--item-tools-wrapper {
@@ -413,7 +411,7 @@ header {
 	color: #fff;
 	background-color: #238900;
 	display: inline-block;
-	margin-top: 45px;
+	margin-top: calc(1.6 * var(--gap));
 	padding: 11px 25px;
 	padding-bottom: 9px;
 	box-sizing: border-box;

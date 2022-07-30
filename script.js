@@ -24,6 +24,30 @@ function setHeight__collateral() {
 	secondElement.style.top = firstElementHeight;
 }
 
+// resolve task tools section margin gap
+
+var $toolBlocks = document.querySelectorAll('.content__table--item-description');
+var toolBlocks = [];
+
+if (window.innerWidth >= 600) {
+	setInterval(setToolGap, 500);
+}
+
+function setToolGap() {
+	for (let i=0; i < $toolBlocks.length; i++) {
+		toolBlocks.push($toolBlocks[i].clientHeight);
+	}
+	
+	maxElTool = Math.max(...toolBlocks);
+	
+	for (let i = 0; i < toolBlocks.length; i++) {
+		if (toolBlocks[i] < maxElTool) {
+			$toolBlocks[i].style.minHeight = `${maxElTool}px`; 
+		} else {
+			continue
+		}
+	}
+}
 
 // SWIPER SYSTEM
 document.addEventListener('DOMContentLoaded', function() {
