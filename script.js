@@ -42,7 +42,8 @@ function setToolGap() {
 	
 	for (let i = 0; i < toolBlocks.length; i++) {
 		if (toolBlocks[i] < maxElTool) {
-			$toolBlocks[i].style.minHeight = `${maxElTool}px`; 
+			console.log($toolBlocks[i]);
+			$toolBlocks[i] ? $toolBlocks[i].style.minHeight = `${maxElTool}px` : null; 
 		} else {
 			continue
 		}
