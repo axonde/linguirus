@@ -36,6 +36,12 @@ a {
 	text-decoration: none;
 }
 
+.training > * {
+    height: 100vh !important;
+    width: 100vw !important;
+}
+
+
 body {
 	font-family: var(--userfont);
 	font-size: var(--sizeindex);
@@ -364,7 +370,7 @@ header {
 	font-weight: lighter;
 	font-size: calc(var(--sizeindex)*0.9);
 	line-height: calc(var(--sizeindex) * 1.1);
-	margin-bottom: var(--gap);
+	margin-bottom: calc(var(--gap) * 2);
 	min-height: 130px;
 }
 
@@ -413,7 +419,7 @@ header {
 	color: #fff;
 	background-color: #238900;
 	display: inline-block;
-	margin-top: 45px;
+	margin-top: calc(1.6 * var(--gap));
 	padding: 11px 25px;
 	padding-bottom: 9px;
 	box-sizing: border-box;

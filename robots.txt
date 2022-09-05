@@ -1,0 +1,3 @@
+Robot.txt
+User-agent: *
+Disallow: /admin.php
