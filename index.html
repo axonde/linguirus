@@ -4,15 +4,13 @@
 <head>
 
 	<meta charset="utf-8">
-	<!-- <base href="/"> -->
 
 	<title>LINGUIRUS</title>
-	<meta name="description" content="Linguirus Description">
+	<meta name="description" content="Linguirus ©. English and French tutor.">
 
 	<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
 
-	<!-- <link rel="icon" href="img/favicon.png"> -->
-
+	<!-- favicons -->
 	<link rel="apple-touch-icon" sizes="180x180" href="img/apple-touch-icon.png">
 	<link rel="icon" type="image/png" sizes="48x48" href="img/favicon-48.png" />
 	<link rel="icon" type="image/png" sizes="32x32" href="img/favicon-32.png">
@@ -21,16 +19,24 @@
 	<meta name="msapplication-TileColor" content="#fff500">
 	<meta name="theme-color" content="#ffffff">
 
+	<!-- styles -->
 	<link rel="stylesheet" href="css/main.css">
 	<link rel="stylesheet" href="css/media.css">
 
+	<script src="script.js" defer></script>
+
+	<!-- connect bundles and api -->
 	<link rel="preconnect" href="https://fonts.googleapis.com"> 
 	<link rel="stylesheet" href="libs/swiper/swiper-bundle.min.css"></link>
-
-	<script src="script.js" defer></script>
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
 
-
+	<!-- RECAPTCHA -->
+	<script src="https://www.google.com/recaptcha/api.js" async defer></script>
+	<script>
+		function formSubmit(token) {
+      document.getElementById("form_submit").submit();
+    }
+	</script>
 
 	<!-- GLIDE SCROLLING -->
 	<script type="text/javascript" defer>
@@ -83,9 +89,6 @@
 			<svg class="not-visible-for-mobile" preserveAspectRatio="none" viewBox="0 0 1500 139" fill="none" xmlns="http://www.w3.org/2000/svg">
 				<path width="100%"  height="139px" fill-rule="evenodd" clip-rule="evenodd" d="M0 139L50 132.381C100 125.762 200 112.524 300 102.595C400 92.6667 500 86.0476 600 102.595C700 119.143 843.5 131.046 943.5 124.427C1043.5 117.808 1127 93.8067 1227 67.3305C1314 44.2962 1400 39.7143 1450 39.7143H1500V0H1450C1400 0 1300 0 1200 0C1100 0 1000 0 900 0C800 0 700 0 600 0C500 0 400 0 300 0C200 0 100 0 50 0H0V139Z" fill="#6D4EA4"/>
 			</svg>
-			<!-- <svg class="mobile" preserveAspectRatio="none" viewBox="0 0 415 92" fill="none" xmlns="http://www.w3.org/2000/svg">
-				<path width="100%"  height="92px" fill-rule="evenodd" clip-rule="evenodd" d="M0 92L13.8333 87.6191C27.6667 83.2381 55.3333 74.4762 83 67.9048C110.667 61.3333 138.333 56.9524 166 67.9048C193.667 78.8571 233.368 86.7354 261.035 82.3544C288.702 77.9735 311.803 62.0879 339.47 44.5641C363.54 29.3184 387.333 26.2857 401.167 26.2857H415V0H401.167C387.333 0 359.667 0 332 0C304.333 0 276.667 0 249 0C221.333 0 193.667 0 166 0C138.333 0 110.667 0 83 0C55.3333 0 27.6667 0 13.8333 0H0V92Z" fill="#6D4EA4"/>
-			</svg>	 -->
 			<svg class="mobile" preserveAspectRatio="none" viewBox="0 0 415 69" fill="none" xmlns="http://www.w3.org/2000/svg">
 				<path width="100%" height="69px" fill-rule="evenodd" clip-rule="evenodd" d="M0 69L13.8333 65.7143C27.6667 62.4286 55.3333 55.8571 83 50.9286C110.667 46 138.333 42.7143 166 50.9286C193.667 59.1429 233.368 65.0515 261.035 61.7658C288.702 58.4801 311.803 46.5659 339.47 33.4231C363.54 21.9888 387.333 19.7143 401.167 19.7143H415V0H401.167C387.333 0 359.667 0 332 0C304.333 0 276.667 0 249 0C221.333 0 193.667 0 166 0C138.333 0 110.667 0 83 0C55.3333 0 27.6667 0 13.8333 0H0V69Z" fill="#6D4EA4"/>
 			</svg>
@@ -97,10 +100,10 @@
 				<div class="header--wrapper__logo"></div>
 
 				<div class="header--wrapper--nav" id="menu__header">
-					<div class="header--wrapper--nav__item"><a class="link__header" href="#tools">формат занятий</a></div>
+					<div class="header--wrapper--nav__item"><a class="link__header" href="#tools">формат занятия</a></div>
 					<div class="header--wrapper--nav__item"><a class="link__header" href="#english">английский</a></div>
 					<div class="header--wrapper--nav__item"><a class="link__header" href="#french">французский</a></div>
-					<div class="header--wrapper--nav__item"><a class="link__header" href="#craft">крафт</a></div>
+					<div class="header--wrapper--nav__item"><a class="link__header" href="#craft">Слайдер</a></div>
 				</div>
 
 				<div class="header--wrapper--nav__mobile">
@@ -111,13 +114,12 @@
 						</svg>
 					</div>
 
-
 					<!-- MOBILE -->
 					<div class="header--wraper--nav__mobile__burgerMenu mobile">
 						<span class="btn-item"><a href="#tools" class="link__header">Форматы занятий</a></span>
 						<span class="btn-item"><a href="#english" class="link__header">Английский</a></span>
 						<span class="btn-item"><a href="#french" class="link__header">Французский</a></span>
-						<span class="btn-item"><a href="#craft" class="link__header">Крафт</a></span>
+						<span class="btn-item"><a href="#craft" class="link__header">Слайдер</a></span>
 					</div>
 				
 					<div class="header--wrapper--nav__mobile__logo">
@@ -154,7 +156,7 @@
 
 					<div class="content__text">
 						<div class="content__text--prime accent">онлайн</div>
-						<div class="content__text--second">Французский <br> Английский <br> В картинках</div>
+						<div class="content__text--second">в картинках Французский<br>Английский<br></div>
 					</div>
 
 					<div class="content__image"></div>
@@ -187,9 +189,7 @@
 
 							<div class="content__text--decoration" id="secondElement"></div>
 
-							<div class="content__text--about">
-								Изучение иностранного языка требует времени и сил. Вы можете облегчить процесс запоминания, воспользовавшись слайдами с иллюстрациями или крафт-карточками. Заказ и доставка слайдов осуществляется онлайн, обучение по слайдам также проходит онлайн.
-							</div>
+							<div class="content__text--about">Изучение иностранного языка требует времени и сил. Вы ощутимо облегчите процесс запоминания, воспользовавшись слайдами с иллюстрациями. Вы ищете собеседника для практики английского или французского, Вы можете заказать 20 минут онлайн беседы в удобное время и с необходимой частотой.</div>
 						</div>
 					</div>
 
@@ -209,15 +209,13 @@
 					<div class="content__title">Форматы занятий</div>
 				</div>
 
-				<div class="content__table">
+				<div class="content__table"> 
 
 					<!--ITEM 1-->
 					<div class="content__table--item">
 						<div class="content__table--item-header">20 минут</div>
 
-						<div class="content__table--item-description">
-							Онлайн осуществляется беседа на английском или французском в течение 20 минут с переводом на русский.
-						</div>
+						<div class="content__table--item-description">Заказ обучения онлайн по слайдам посредством удобного мессенджера. Беседа осуществляется на английском или французском в течение 20 минут с переводом на русский. В конце телефонного разговора предлагается письменное задание с дальнейшей проверкой.</div>
 
 						<div class="content__table--item-tools">
 							<div class="content__table--item-tools-wrapper">
@@ -248,9 +246,7 @@
 					<div class="content__table--item reverse">
 						<div class="content__table--item-header">Ежедневно</div>
 
-						<div class="content__table--item-description">
-							Онлайн доставка слайда каждый день с возможностью обратной связи. Слайды иллюстрируют текст рассказа, грамматические упражнения или аудиозаписи.
-						</div>
+						<div class="content__table--item-description">Подбор под Ваш уровень ежедневно высылаемых слайдов с упражнениями и проверка выполненного. Слайды иллюстрируют текст рассказа, грамматическое упражнение или аудиозапись.&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</div>
 
 						<div class="content__table--item-tools">
 							<div class="content__table--item-tools-wrapper">
@@ -260,7 +256,7 @@
 
 							<div class="content__table--item-tools-wrapper">
 								<div class="content__table--item-tools-ico money"></div>
-								<div class="content__table--item-tools-description">100 ₽</div>
+								<div class="content__table--item-tools-description">200 ₽</div>
 							</div>
 						</div>
 
@@ -281,9 +277,7 @@
 					<div class="content__table--item">
 						<div class="content__table--item-header">Видео</div>
 
-						<div class="content__table--item-description">
-							Онлайн доставка коротких видео-файлов на английском или французском с возможностью обратной связи.
-						</div>
+						<div class="content__table--item-description">Отправка по мессенджеру коротких видео-файлов на английском или французском с заданиями на тренировку понимания на слух, с вопросами по содержанию и с проверкой выполненного.&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</div>
 
 						<div class="content__table--item-tools">
 							<div class="content__table--item-tools-wrapper">
@@ -293,7 +287,7 @@
 
 							<div class="content__table--item-tools-wrapper">
 								<div class="content__table--item-tools-ico money"></div>
-								<div class="content__table--item-tools-description">350 ₽</div>
+								<div class="content__table--item-tools-description">400 ₽</div>
 							</div>
 						</div>
 
@@ -318,31 +312,31 @@
 
 					<div class="swiper-wrapper">
 						<div class="swiper-slide slide-item" id="english">
-							<div class="img" style="background: url(img/slider-images/english-1.jpeg);"></div>
+							<div class="img" style="background: url(img/slider-images/temp.jpg);"></div>
 						</div>
 						<div class="swiper-slide slide-item" id="english">
-							<div class="img" style="background: url(img/slider-images/english-2.jpeg);"></div>
+							<div class="img" style="background: url(img/slider-images/temp.jpg);"></div>
 						</div>
 						<div class="swiper-slide slide-item" id="english">
-							<div class="img" style="background: url(img/slider-images/english-3.jpeg);"></div>
+							<div class="img" style="background: url(img/slider-images/temp.jpg);"></div>
 						</div>
 						<div class="swiper-slide slide-item" id="english">
-							<div class="img" style="background: url(img/slider-images/english-4.jpeg);"></div>
+							<div class="img" style="background: url(img/slider-images/temp.jpg);"></div>
 						</div>
 						<div class="swiper-slide slide-item" id="english">
-							<div class="img" style="background: url(img/slider-images/english-5.jpeg)"></div>
+							<div class="img" style="background: url(img/slider-images/temp.jpg)"></div>
 						</div>
 						<div class="swiper-slide slide-item" id="english">
-							<div class="img" style="background: url(img/slider-images/english-6.jpeg);"></div>
+							<div class="img" style="background: url(img/slider-images/temp.jpg);"></div>
 						</div>
 						<div class="swiper-slide slide-item" id="english">
-							<div class="img" style="background: url(img/slider-images/english-7.jpeg);"></div>
+							<div class="img" style="background: url(img/slider-images/temp.jpg);"></div>
 						</div>
 						<div class="swiper-slide slide-item" id="english">
-							<div class="img" style="background: url(img/slider-images/english-8.jpeg);"></div>
+							<div class="img" style="background: url(img/slider-images/temp.jpg);"></div>
 						</div>
 						<div class="swiper-slide slide-item" id="english">
-							<div class="img" style="background: url(img/slider-images/english-9.jpeg);"></div>
+							<div class="img" style="background: url(img/slider-images/temp.jpg);"></div>
 						</div>
 					</div>
 							
@@ -353,9 +347,7 @@
 
 				</div>
 
-					<div class="featureItem__description" id="link__english">
-						На занятиях используется слайдовый метод: обучающийся получает набор визуальных опор и в телефонном разговоре прорабатывает их. Упражнения известных методик Oxford, Cambridge, Просвещение и других издательств составляют содержание занятий. В конце каждого занятия предлагается письменное задание с последующей проверкой.
-					</div>
+					<div class="featureItem__description" id="link__english">Заказав обучение, Вы получаете набор визуальных опор и при необходимости в телефонном разговоре сможете практиковать английский с собеседником. Слайды иллюстрируют упражнения известных методик Oxford, Cambridge, Просвещение и других. В конце каждой онлайн беседы даётся письменное задание с последующей проверкой.</div>
 				</div>
 
 				<div class="featureItem__button button">перейти</div>
@@ -375,31 +367,31 @@
 
 						<div class="swiper-wrapper">
 							<div class="swiper-slide slide-item">
-								<div class="img" style="background: url(img/slider-images/french-1.jpeg);"></div>
+								<div class="img" style="background: url(img/slider-images/temp.jpg);"></div>
 							</div>
 							<div class="swiper-slide slide-item">
-								<div class="img" style="background: url(img/slider-images/french-2.jpeg);"></div>
+								<div class="img" style="background: url(img/slider-images/temp.jpg);"></div>
 							</div>
 							<div class="swiper-slide slide-item">
-								<div class="img" style="background: url(img/slider-images/french-3.jpeg);"></div>
+								<div class="img" style="background: url(img/slider-images/temp.jpg);"></div>
 							</div>
 							<div class="swiper-slide slide-item">
-								<div class="img" style="background: url(img/slider-images/french-4.jpeg);"></div>
+								<div class="img" style="background: url(img/slider-images/temp.jpeg);"></div>
 							</div>
 							<div class="swiper-slide slide-item">
-								<div class="img" style="background: url(img/slider-images/french-5.jpeg);"></div>
+								<div class="img" style="background: url(img/slider-images/temp.jpg);"></div>
 							</div>
 							<div class="swiper-slide slide-item">
-								<div class="img" style="background: url(img/slider-images/french-6.jpeg);"></div>
+								<div class="img" style="background: url(img/slider-images/temp.jpg);"></div>
 							</div>
 							<div class="swiper-slide slide-item">
-								<div class="img" style="background: url(img/slider-images/french-7.jpeg);"></div>
+								<div class="img" style="background: url(img/slider-images/temp.jpg);"></div>
 							</div>
 							<div class="swiper-slide slide-item">
-								<div class="img" style="background: url(img/slider-images/french-8.jpeg);"></div>
+								<div class="img" style="background: url(img/slider-images/temp.jpg);"></div>
 							</div>
 							<div class="swiper-slide slide-item">
-								<div class="img" style="background: url(img/slider-images/french-9.jpeg);"></div>
+								<div class="img" style="background: url(img/slider-images/temp.jpg);"></div>
 							</div>
 						</div>
 							
@@ -409,9 +401,7 @@
 						<div class="swiper-button-next"></div>
 					</div>
 
-					<div class="featureItem__description" id="link__french">
-						В крафт-карточках соблюдена французская разлиновка листа, отличающаяся от русской. Слайды иллюстрируют упражнения, разработанные издательскими домами Nathan, Larousse, Просвещение и другими. В конце беседы на французском предлагается письменный перевод фрагмента разговора.
-					</div>
+					<div class="featureItem__description" id="link__french">При обучении онлайн используются упражнения, разработанные издательскими домами Nathan, Larousse, Просвещение и другими. Письменное задание регулярно предлагается в конце беседы, сообщением высылается проверка.</div>
 				</div>
 
 				<div class="featureItem__button button purple">перейти</div>
@@ -422,7 +412,7 @@
 		<!-- FEATURE 6 -->
 		<div class="feature-6" id="craft">
 			<div class="featureItem--wrapper">
-				<div class="featureItem__header">Крафт-карточки</div>
+				<div class="featureItem__header">Слайдер-тренажер</div>
 
 				<!--SLIDER FUNCTIONAL SYSTEM-->
 				<div class="featureItem__slider big">
@@ -430,17 +420,20 @@
 
 					<div class="swiper-wrapper">
 						<div class="swiper-slide slide-item" id="english">
-							<div class="img" style="background: url(img/slider-images/temp.jpeg);"></div>
+							<div class="img" style="background: url(img/slider-images/temp.jpg);"></div>
 						</div>
 						<div class="swiper-slide slide-item" id="english">
-							<div class="img" style="background: url(img/slider-images/temp.jpeg);"></div>
+							<div class="img" style="background: url(img/slider-images/temp.jpg);"></div>
 						</div>
 						<div class="swiper-slide slide-item" id="english">
-							<div class="img" style="background: url(img/slider-images/temp.jpeg);"></div>
+							<div class="img" style="background: url(img/slider-images/temp.jpg);"></div>
+						</div>	
+						<div class="swiper-slide slide-item" id="english">
+							<div class="img" style="background: url(img/slider-images/temp.jpg);"></div>
 						</div>
 						<div class="swiper-slide slide-item" id="english">
-							<div class="img" style="background: url(img/slider-images/temp.jpeg);"></div>
-						</div>
+							<div class="img" style="background: url(img/slider-images/temp.jpg);"></div>
+						</div>				
 					</div>
 						
  					<div class="swiper-pagination"></div>
@@ -450,13 +443,11 @@
 				</div>
 
 				<div class="featureItem__description--wrapper">
-					<div class="featureItem__description--main glideScrolling">
-						Предлагаем Вашему вниманию карточки, которые можно легко сделать из подручных средств или заказать <span class="link button"><a style="cursor: pointer;">здесь</a></span>. 
+					<div class="featureItem__description--main glideScrolling">Слайдер часто используется при обучении речи.&nbsp; Это удобный инструмент для увеличения словарного запаса. Заказы обучения онлайн по заявке&nbsp;<span class="link button"><a style="cursor: pointer;">здесь</a></span>. 
 					</div>
 					<div class="featureItem__description--collateral--wrapper">
 						<div class="featureItem__description--collateral" id="collateralText">
-							Доказано, что запоминание новых слов неразрывно связано с образом, связанным со значением слова. Крафт-карточки представляют собой бумажное изделие с картинкой и примером написания слова на обратной стороне.
-						</div>
+							Доказано, что запоминание слов неразрывно связано с образом. Использование слайдера не только превращает&nbsp; процесс в игру, но и наглядно объясняет употребление слов в контексте.&nbsp;Картинки слайдера регулярно обновляются, что обеспечивает постепенное накопление лексики. Переход&nbsp;на&nbsp; тренажер английского по&nbsp;<span class="link"><a href="https://linguirus.ru/training.html">ссылке</a></span>.</div>
 
 						<div class="featureItem__description--collateral--design not-visible-for-mobile" id="collateralElement"></div>
 					</div>
@@ -474,33 +465,33 @@
 
 				<div class="short-link" id="link__footer">
 					<ul>
-						<li><a class="link__header" href="#tools">Виды услуг</a></li>
+						<li><a class="link__header" href="#tools">Форматы</a></li>
 						<li><a class="link__header" href="#english">Английский</a></li>
 						<li><a class="link__header" href="#french">Французский</a></li>
-						<li><a class="link__header" href="#craft">Крафт</a></li>
+						<li><a class="link__header" href="#craft">Тренажер</a></li>
 					</ul>
 				</div>
 
 				<div class="web-studio">Разработка сайта: <br> <span class="link"><a href="https://t.me/axondee">@axondee</a></span></div>
 
-				<div class="license">Все правы защищены</div>
+				<div class="license">Режим НО НПД</div>
 			</div>
 		</footer>
 	</main>
 
 	<div class="form-popup form-popup__hidden" id="form">
-		<form action="contact.php" method="post" class="form-container">
+		<form action="contact.php" method="post" id="form_submit" class="form-container">
+
 			<div type="button" class="btn-cancel" onclick="closeForm()">
 				<svg width="34" height="34" viewBox="0 0 44 44" fill="none" xmlns="http://www.w3.org/2000/svg">
 					<path d="M42 22C42 10.9583 33.0417 2 22 2C10.9583 2 2 10.9583 2 22C2 33.0417 10.9583 42 22 42C33.0417 42 42 33.0417 42 22Z" stroke="black" stroke-width="3.16667" stroke-miterlimit="10"/>
 					<path d="M15.333 28.6666L28.6663 15.3333M28.6663 28.6666L15.333 15.3333L28.6663 28.6666Z" stroke="black" stroke-width="3.16667" stroke-linecap="round" stroke-linejoin="round"/>
-				</svg>					
+				</svg>
 			</div>
 
 			<h2>ЗАЯВКА</h2>
 
-			<div class="alert-text">
-				Вам необходимо дополнительная информация или Вы хотели бы заказать слайды на английском или фраунцузском языках. <br> Заполните форму ниже.
+			<div class="alert-text">Вы хотели бы заказать онлайн обучение по выбранному формату, пожалуйста, оставьте Вашу заявку. Если Вам необходима дополнительная информация, то уточните интересующий Вас формат.<br> Заполните форму ниже.
 			</div>
 
 			<div class="beautiful-Flex__wrapper">
@@ -510,12 +501,12 @@
 					<div class="column-1">
 						<div class="input__wrapper">
 							<label for="name" class="name-form">ИМЯ:</label>
-							<input type="text" placeholder="Имя" name="name">
+							<input type="text" placeholder="Имя" minlength="4" maxlength="30" name="name">
 						</div>
 
 						<div class="input__wrapper">
 							<label for="email">MAIL*:</label>
-							<input type="text" placeholder="mail@mail.ru" name="email" required>
+							<input type="email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$" placeholder="mail@mail.ru" name="email" required>
 						</div>
 
 						<div class="input__wrapper">
@@ -531,12 +522,19 @@
 
 				</div>
 			
+				<div class="g-recaptcha"
+        	data-sitekey="_YOUR_CLIENT_KEY"
+        	data-callback="formSubmit"
+        	data-size="invisible">
+    		</div>
+
 				<button type="submit" class="btn-submit">ОТПРАВИТЬ</button>
 			</div>
 		</form>
 	</div>
 
+	<!-- connect scripts bundles -->
 	<script src="libs/swiper/swiper-bundle.min.js"></script>
-
 </body>
+
 </html>

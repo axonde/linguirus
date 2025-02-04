@@ -1,6 +1,6 @@
 {
-    "name": "",
-    "short_name": "",
+    "name": "© LINGUIRUS",
+    "short_name": "LINGUIRUS",
     "icons": [
         {
             "src": "img/android-chrome-192.png",
@@ -13,7 +13,7 @@
             "type": "image/png"
         }
     ],
-    "theme_color": "#ffffff",
-    "background_color": "#ffffff",
+    "theme_color": "#6D4EA4",
+    "background_color": "#036639eb",
     "display": "standalone"
 }

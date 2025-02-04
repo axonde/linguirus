@@ -399,6 +399,11 @@
 		font-size: calc(1.7 * var(--sizeindex));
 		margin-bottom: var(--gap);
 	}
+	
+	/*FIX ON LIVE HOST*/
+	.featureItem__slider.big .img {
+	    background-size: contain !important;
+	}
 }
 
 /* Small (sm) */

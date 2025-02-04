@@ -36,6 +36,12 @@ a {
 	text-decoration: none;
 }
 
+.training > * {
+    height: 100vh !important;
+    width: 100vw !important;
+}
+
+
 body {
 	font-family: var(--userfont);
 	font-size: var(--sizeindex);
@@ -225,8 +231,10 @@ header {
 
 .feature-1 .content__text--second {
 	font-size: calc(var(--sizeindex) * 3.4);
+	text-transform: capitalize;
 	line-height: 130%;
 	margin-left: calc(var(--gap) * 2.2);
+	box-sizing: unset;
 }
 
 .feature-1 .content__text {
@@ -362,8 +370,8 @@ header {
 	font-weight: lighter;
 	font-size: calc(var(--sizeindex)*0.9);
 	line-height: calc(var(--sizeindex) * 1.1);
-	margin-bottom: calc(var(--gap) * 2.5);
-	/* min-height: 130px; */
+	margin-bottom: calc(var(--gap) * 2);
+	min-height: 130px;
 }
 
 .content__table--item-tools-wrapper {

@@ -42,13 +42,13 @@ function setToolGap() {
 	
 	for (let i = 0; i < toolBlocks.length; i++) {
 		if (toolBlocks[i] < maxElTool) {
-			console.log($toolBlocks[i]);
 			$toolBlocks[i] ? $toolBlocks[i].style.minHeight = `${maxElTool}px` : null; 
 		} else {
 			continue
 		}
 	}
 }
+
 
 // SWIPER SYSTEM
 document.addEventListener('DOMContentLoaded', function() {
@@ -107,6 +107,8 @@ for (let i=2; i < buttons.length; i++) {
 	});
 }
 
+
+// FORM SYSTEM
 function closeForm() {
 	setTimeout(hidden, 100);
 	function hidden() {
@@ -117,3 +119,9 @@ function closeForm() {
 		document.getElementById("form").style.display = "none";
 	}
 }
+
+$('#form_submit').submit(function (event) {
+	event.preventDefault();
+	grecaptcha.reset();
+	grecaptcha.execute();
+});
