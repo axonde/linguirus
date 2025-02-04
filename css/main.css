@@ -19,7 +19,7 @@
 /* GENERAL CSS SETTINGS */
 
 ::placeholder { color: #666; }
-::selection { background-color: var(--accent); color: #fff; }
+::selection { background-color: var(--accent); color: #000; }
 input, textarea { outline: none; }
 input:focus:required:invalid, textarea:focus:required:invalid { border-color: red; }
 input:required:valid, textarea:required:valid { border-color: green; }
