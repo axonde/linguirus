@@ -1,0 +1,45 @@
+.exception__wrapper {
+	padding: 80px 114px 380px;
+	position: relative;
+	background-image: url('../img/404-banner.svg');
+	background-repeat: no-repeat;
+	background-position: -50px 90%;
+}
+
+.exception--abstract {
+	display: flex;
+	gap: 20px;
+	align-items: center;
+}
+
+.exception--abstract span:nth-child(1) {
+	font-weight: 500;
+	font-size: 36px;
+	opacity: 30%;
+}
+.exception--abstract span:nth-child(2) {
+	font: 500 48px "Montserrat Alternates";
+	opacity: 50%;
+	text-decoration: line-through;
+}
+.exception--abstract span:nth-child(3) {
+	font: 500 62px "Montserrat Alternates";
+	opacity: 80%;
+}
+.exception--text {
+	font-weight: 600;
+	font-size: 94px;
+	line-height: 1;
+	max-width: 850px;
+	width: calc(100vw - 40%);
+	margin-top: 50px;
+	z-index: 1;
+}
+
+.exception--ghost {
+	position: absolute;
+	z-index: 0;
+ 	top: 140px;
+	right: 27px;
+	width: 40%;
+}

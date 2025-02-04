@@ -1,7 +1,13 @@
 // блок в 100% высоты feature-2
-setInterval(setSize, 10);
-setInterval(setSize__collateral, 10);
-setInterval(setHeight__collateral, 10);
+if (document.getElementById('firstElement')) {
+	setInterval(setSize, 10);
+}
+if (document.getElementById('collateralText')) {
+	setInterval(setSize__collateral, 10);
+}
+if (document.getElementById('collateralText')) {
+	setInterval(setHeight__collateral, 10);
+}
 
 function setSize() {
 	var heightFeatureTextDecoration = document.getElementById('firstElement').clientHeight;
@@ -29,7 +35,7 @@ function setHeight__collateral() {
 var $toolBlocks = document.querySelectorAll('.content__table--item-description');
 var toolBlocks = [];
 
-if (window.innerWidth >= 600) {
+if (window.innerWidth >= 600 && $toolBlocks.length != 0) {
 	setInterval(setToolGap, 500);
 }
 
@@ -51,21 +57,23 @@ function setToolGap() {
 
 
 // SWIPER SYSTEM
-document.addEventListener('DOMContentLoaded', function() {
-
-	const swiper = new Swiper('.featureItem__slider', {
-		loop: true,
-		speed: 1200,
-		slidesPerView: '1',
-		pagination: {
-			el: '.swiper-pagination',
-		},
-		navigation: {
-			nextEl: '.swiper-button-next',
-			prevEl: '.swiper-button-prev',
-		}
+if (document.querySelector('.featureItem__slider')) {
+	document.addEventListener('DOMContentLoaded', function() {
+	
+		const swiper = new Swiper('.featureItem__slider', {
+			loop: true,
+			speed: 1200,
+			slidesPerView: '1',
+			pagination: {
+				el: '.swiper-pagination',
+			},
+			navigation: {
+				nextEl: '.swiper-button-next',
+				prevEl: '.swiper-button-prev',
+			}
+		})
 	})
-})
+}
 
 
 // обработчик событий кнопок
