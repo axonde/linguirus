@@ -74,7 +74,7 @@
 	animation: eyelash-moving-right 3s cubic-bezier(.38,.1,.65,.86) alternate infinite;
 }
 .exception--ghost > svg .mouth {
-	transform-origin: top center;
+	transform-origin: bottom center;
 	animation: mouth 3s cubic-bezier(.38,.1,.65,.86) alternate infinite;
 }
 
@@ -163,10 +163,10 @@
 		transform: translateY(0) rotate(0deg);
 	}
 	50% {
-		transform: translateY(-8px) rotate(-1deg);
+		transform: translateY(-6px) rotate(-0.7deg);
 	}
 	to {
-		transform: translateY(-5px);
+		transform: translateY(-4px);
 	}
 }
 @keyframes eyelash-moving-right {
@@ -174,10 +174,10 @@
 		transform: translateY(0) rotate(0deg);
 	}
 	50% {
-		transform: translateY(-10px) rotate(1deg);
+		transform: translateY(-9px) rotate(0.7deg);
 	}
 	to {
-		transform: translateY(-9px) rotate(0deg);
+		transform: translateY(-7px) rotate(0deg);
 	}
 }
 @keyframes mouth {
@@ -185,7 +185,7 @@
 		transform: scale(1);
 	}
 	50% {
-		transform: scale(0.98);
+		transform: scale(0.99);
 	}
 	to {
 		transform: scale(1);
