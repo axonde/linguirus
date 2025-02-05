@@ -5,7 +5,7 @@
 .exception__wrapper {
 	padding: 30px 114px 380px 80px;
 	position: relative;
-	overflow: hidden;
+	/* overflow: hidden; */
 }
 .exception-404-banner {
 	position: absolute;
@@ -55,33 +55,23 @@
 	bottom: 15px;
 	right: 27px;
 	width: 38%;
-}
-.exception--ghost .to-down {
-	animation: ghost 3s cubic-bezier(.38,.1,.65,.86) alternate infinite;
-}
+} .exception--ghost > svg {overflow: visible;}
+.exception--ghost .to-down {animation: ghost 3s cubic-bezier(.38,.1,.65,.86) alternate infinite;}
 .exception--ghost > svg > g > ellipse {
 	transform-origin: left bottom;
 	animation: scaling 3s cubic-bezier(.38,.1,.65,.86) alternate infinite;
 }
 .exception--ghost > svg .eyelash-left,
-.exception--ghost > svg .eyelash-right {
-	transform-origin: center;
-}
-.exception--ghost > svg .eyelash-left {
-	animation: eyelash-moving-left 3s cubic-bezier(.38,.1,.65,.86) alternate infinite;
-}
-.exception--ghost > svg .eyelash-right {
-	animation: eyelash-moving-right 3s cubic-bezier(.38,.1,.65,.86) alternate infinite;
-}
+.exception--ghost > svg .eyelash-right {transform-origin: center;}
+.exception--ghost > svg .eyelash-left {animation: eyelash-moving-left 3s cubic-bezier(.38,.1,.65,.86) alternate infinite;}
+.exception--ghost > svg .eyelash-right {animation: eyelash-moving-right 3s cubic-bezier(.38,.1,.65,.86) alternate infinite;}
 .exception--ghost > svg .mouth {
 	transform-origin: bottom center;
 	animation: mouth 3s cubic-bezier(.38,.1,.65,.86) alternate infinite;
 }
 
 @media (max-width: 980px) {
-	.exception__wrapper {
-		padding: 40px 45px 260px;
-	}
+	.exception__wrapper {padding: 40px 45px 260px;}
 	.exception-404-banner {
 		left: -20px;
 		bottom: -10%;
@@ -96,9 +86,7 @@
 		max-width: 510px;
 		font-size: calc(min(var(--sizeindex) * 2.8, 92px));
 	}
-	.exception--ghost {
-		right: 40px;
-	}
+	.exception--ghost {right: 40px;}
 }
 
 @media (min-width: 500px) and (max-width: 650px) {
@@ -106,9 +94,7 @@
 }
 
 @media (max-width: 650px) {
-	.exception__wrapper {
-		padding: 20px 12px 450px;
-	}
+	.exception__wrapper {padding: 20px 12px 450px;}
 	.exception-404-banner {
 		transform: rotate(-90deg) translateY(490px);
 		transform-origin: bottom left;
@@ -137,57 +123,27 @@
 }
 
 @keyframes ghost {
-	from {
-		transform: translateY(0);
-	}
-	50% {
-		transform: translateY(-20px);
-	}
-	to {
-		transform: translateY(40px);
-	}
+	from {transform: translateY(0);}
+	50% {transform: translateY(-20px);}
+	to {transform: translateY(40px);}
 }
 @keyframes scaling {
-	from {
-		transform: scaleY(1) scaleX(1);
-	}
-	50% {
-		transform: scaleY(1.03) scaleX(1.05);
-	}
-	to {
-		transform: scaleY(0.99) scaleX(0.95);
-	}
+	from {transform: scaleY(1) scaleX(1);}
+	50% {transform: scaleY(1.03) scaleX(1.05);}
+	to {transform: scaleY(0.99) scaleX(0.95);}
 }
 @keyframes eyelash-moving-left {
-	from {
-		transform: translateY(0) rotate(0deg);
-	}
-	50% {
-		transform: translateY(-6px) rotate(-0.7deg);
-	}
-	to {
-		transform: translateY(-4px);
-	}
+	from {transform: translateY(0) rotate(0deg);}
+	50% {transform: translateY(-6px) rotate(-0.7deg);}
+	to {transform: translateY(-4px);}
 }
 @keyframes eyelash-moving-right {
-	from {
-		transform: translateY(0) rotate(0deg);
-	}
-	50% {
-		transform: translateY(-9px) rotate(0.7deg);
-	}
-	to {
-		transform: translateY(-7px) rotate(0deg);
-	}
+	from {transform: translateY(0) rotate(0deg);}
+	50% {transform: translateY(-9px) rotate(0.7deg);}
+	to {transform: translateY(-7px) rotate(0deg);}
 }
 @keyframes mouth {
-	from {
-		transform: scale(1);
-	}
-	50% {
-		transform: scale(0.99);
-	}
-	to {
-		transform: scale(1);
-	}
+	from {transform: scale(1);}
+	50% {transform: scale(0.99);}
+	to {transform: scale(1);}
 }

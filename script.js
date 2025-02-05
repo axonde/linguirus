@@ -59,7 +59,6 @@ function setToolGap() {
 // SWIPER SYSTEM
 if (document.querySelector('.featureItem__slider')) {
 	document.addEventListener('DOMContentLoaded', function() {
-	
 		const swiper = new Swiper('.featureItem__slider', {
 			loop: true,
 			speed: 1200,
@@ -100,9 +99,11 @@ for (let i=0; i < burgerItems.length; i++) {
 	});
 }
 
-contact.addEventListener("click", function() {
-	console.log("click on contact");
-});
+if (contact) {
+	contact.addEventListener("click", function() {
+		console.log("click on contact");
+	});
+}
 
 //for booking
 for (let i=2; i < buttons.length; i++) {
@@ -114,8 +115,6 @@ for (let i=2; i < buttons.length; i++) {
 		}
 	});
 }
-
-
 // FORM SYSTEM
 function closeForm() {
 	setTimeout(hidden, 100);
